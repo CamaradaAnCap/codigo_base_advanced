@@ -1,12 +1,13 @@
 // Invocamos o leitor de qr code
 const qrcode = require('qrcode-terminal');
-const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js');
+const { Client, Buttons, List, MessageMedia, LocalAuth } = require('whatsapp-web.js');
 const fs = require('fs');
 
 //const client = new Client();
 
 //Para carregarmos o vídeo em nossa máquina Windows
 const client = new Client({
+    authStrategy: new LocalAuth({ clientId: 'Usuario1' }),
     puppeteer: {
         executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
     }
