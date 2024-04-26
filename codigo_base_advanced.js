@@ -5,7 +5,7 @@ const fs = require('fs');
 
 // Final das variáveis do seu modelo
 const wwebVersion = '2.2407.3';
-const sessao = 'Usuario1';
+const sessao = 'advanced';
 
 const client = new Client({
   authStrategy: new LocalAuth({ clientId: sessao }),
